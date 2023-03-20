@@ -137,6 +137,7 @@ form button{
     font-weight: bold;
     box-shadow: 0 5px 0 #31b980;
     border: none;
+    cursor: pointer;
 }
 
 form input::placeholder{
@@ -226,7 +227,7 @@ form p strong{
         justify-content: space-around;
         background-image: url("assets/images/bg-intro-desktop.png");
         gap: 2rem;
-        padding: 0 10rem 0 10rem;
+        padding: 0 12rem 0 12rem;
     }
 
     main {
