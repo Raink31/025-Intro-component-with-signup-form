@@ -109,7 +109,7 @@ form{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     width: 100%;
     height: max-content;
     background: white;
@@ -118,12 +118,17 @@ form{
     box-shadow: 0 10px 0 rgba(0, 0, 0, 0.144);
 }
 
-form input,
+form div,
 form button{
     width: 100%;
-    padding: 1rem;
+    padding: .8rem;
     border: 1px solid rgba(128, 128, 128, 0.205);
     border-radius: 5px;
+}
+
+form input{
+    width: 80%;
+    border: none;
 }
 
 form button{
@@ -136,6 +141,7 @@ form button{
 
 form input::placeholder{
     font-weight: bold;
+    opacity: 70%;
 }
 
 form input:focus{
@@ -152,16 +158,61 @@ form p strong{
     color: var(--red);
 }
 
-.attribution{
-    font-size: .8em;
-    width: 150%;
-    transform: translateY(100px);
+/* Errors */
+
+.inputtext p{
+    display: none;
 }
 
-.attribution a{
-    text-decoration: none;
+.error,
+.empty{
+    border: 2px solid var(--red);
+    position: relative;
+}
+
+.error input{
+    color: var(--red);
     font-weight: bold;
-    color: var(--blue);
+}
+
+.empty input::placeholder{
+    opacity: 0;
+}
+
+.error::before,
+.empty::before{
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    right: 1rem;
+    background: no-repeat url("assets/images/icon-error.svg") right 0 top 0;
+    background-size: 100%;
+}
+
+.empty p {
+    position: absolute;
+    content: "First name cannot be empty";
+    height: max-content;
+    width: max-content;
+    top: 3.4rem;
+    color: var(--red);
+    right: 0;
+    font-size: .5em;
+    font-style: italic;
+    display: block;
+}
+
+.error::after {
+    position: absolute;
+    content: "Looks like this is not an email";
+    height: max-content;
+    width: max-content;
+    right: 0;
+    top: 3.4rem;
+    color: var(--red);
+    font-size: .5em;
+    font-style: italic;
 }
 
 /* Responsive Desktop */
@@ -207,13 +258,18 @@ form p strong{
     /* Free trial section */
 
     .free-trial {
-        padding: 1rem 0;
+        padding: .5rem 0;
+        font-size: .7em;
     }
 
     /* Form section */
 
     form {
         padding: 2rem;
+    }
+
+    form p{
+        font-size: .5em;
     }
 }
 

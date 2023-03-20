@@ -20,10 +20,10 @@
             See how experienced developers solve problems in real-time. Watching scripted 
             tutorials is great, but understanding how developers think is invaluable.
         </p>
-        <div class="attribution">
+        <!-- <div class="attribution">
             <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
             Coded by <a href="#">Yohan Baes</a>.</p>
-        </div>
+        </div> -->
     </header>
     <main>
         <section class="free-trial">
@@ -37,11 +37,22 @@
             </p>
         </section>
         <form action="#">
-            <input type="text" id="first-name" placeholder="First Name">
-            <input type="text" id="last-name" placeholder="Last Name">
-            <input type="email" id="email" placeholder="Email Address">
-            <input type="password" id="password" placeholder="Password">
-            <button>
+            <div id="firstname" class="inputtext">
+                <input class="text-input empty1" type="text" id="first-name" placeholder="First Name">
+                <p>First name cannot be empty</p>
+            </div>
+            <div id="lastname" class="inputtext">
+                <input class="text-input empty2" type="text" id="last-name" placeholder="Last Name">
+                <p>Last name cannot be empty</p>
+            </div>
+            <div id="mail">
+                <input type="email" id="email" placeholder="Email Address">
+            </div>
+            <div id="pssword" class="inputtext">
+                <input class="text-input empty3" type="password" id="password" placeholder="Password">
+                <p>Password cannot be empty</p>
+            </div>
+            <button id="claim-btn">
                 CLAIM YOUR FREE TRIAL
             </button>
             <p class="description">
@@ -49,5 +60,6 @@
             </p>
         </form>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
