@@ -94,13 +94,17 @@ header p{
     margin-bottom: 1.5rem;
 }
 
-.free-trial p{
+.free-trial h2{
     text-align: center;
     display: inline-block;
     width: 65%;
     font-weight: 400;
-    line-height: 26px;
+    font-size: 1em;
 }
+
+    .free-trial span{
+        font-weight: lighter;
+    }
 
 /* Form section */
 
@@ -259,8 +263,12 @@ form p strong{
     /* Free trial section */
 
     .free-trial {
-        padding: .5rem 0;
+        padding: 1rem 0;
         font-size: .7em;
+    }
+
+    .free-trial h2{
+        font-size: 1.4em;
     }
 
     /* Form section */
